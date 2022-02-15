@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from localhost/teachat/twemoji-emoji-keyboard/example.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Jan 2021 12:53:29 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Emoji Keyboard Example</title>
+    <link href="www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <script src="ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+    <script src="emoji_keyboard.js"></script>
+    <link rel="stylesheet" href="emoji_keyboard.css">
+    <link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.2/flatly/bootstrap.min.css">
+    <style>
+        .container { margin: 150px auto; }
+    </style>
+</head>
+
+<body><div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="https://www.jqueryscript.net/other/twemoji-emoji-keyboard.html">Download This Plugin</a></li>
+<li><a href="https://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul><div id="carbon-block"></div>
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+    <div class="container">
+        <h1>Emoji Keyboard Example</h1>
+        <p class="lead">A simple, fast, beautiful, resizable, and searchable emoji picker based on jQuery, Fuse.js, and Twitter Emoji.</p>
+    <button id="test" class="btn btn-danger">Toggle The Emoji Picker</button>
+    <div id="display" class="alert alert-info my-3"></div>
+</div>
+    <script>
+        const zone = document.getElementById("display");
+        var emojiKeyboard = new EmojiKeyboard;
+        /* you can edit a few attributes:
+            - callback: function called when a user clicks on an emoji, with the emoji and a boolean telling if the window got closed
+            - auto_reconstruction: boolean if we should recreate the keyboard when we cannot find it
+            - default_placeholder: placeholder text in the search bar
+            - resizable: boolean if the window can be resized (left side)
+        */
+        emojiKeyboard.callback = (emoji, closed) => {
+            console.info(emoji, closed)
+            zone.innerText += emoji.emoji;
+        };
+        emojiKeyboard.resizable = true;
+        emojiKeyboard.default_placeholder = "You are the best";
+        emojiKeyboard.instantiate(document.getElementById("test"))
+    </script>
+</body>
+
+
+<!-- Mirrored from localhost/teachat/twemoji-emoji-keyboard/example.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 02 Jan 2021 12:53:54 GMT -->
+</html>

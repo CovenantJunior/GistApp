@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload</title>
+	<script type="text/javascript" src="dist/js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<form id="uploadForm" action="image-upload.php" method="post">
+	    <div>
+	        <label>Upload Image File:</label>
+	        <input name="userImage" id="userImage" type="file" class="demoInputBox" />
+	    </div>
+	    <div><input type="submit" id="btnSubmit" value="Submit" class="btnSubmit" /></div>
+	    <div id="progress-div"><div id="progress-bar"></div></div>
+	    <div id="targetLayer"></div>
+	</form>
+	<div id="loader-icon" style="display:none;"><img src="LoaderIcon.gif" /></div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function() { 
+	    $('#uploadForm').submit(function(e) {	
+	        if($('#userImage').val()) {
+	            e.preventDefault();
+	            $('#loader-icon').show();
+	            $(this).ajaxSubmit({ 
+	                target:   '#targetLayer', 
+	                beforeSubmit: function() {
+	                    $("#progress-bar").width('0%');
+	                },
+	                uploadProgress: function (event, position, total, percentComplete){	
+	                    $("#progress-bar").width(total + '%');
+	                    $("#progress-bar").html('<div id="progress-status">' + total +' %</div>')
+	                },
+	                success:function (){
+	                    $('#loader-icon').hide();
+	                },
+	                resetForm: true 
+	            }); 
+	            return false; 
+	        }
+	    });
+	});
+</script>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Typing</title>
+	<style type="text/css">
+		.wave {
+		    margin: 100px auto;
+		    width: 40px;
+		    height: 40px;
+		    position: relative;
+		    text-align: center;
+		}
+		.zoom1, .zoom2, .zoom3 {
+		    width: 30%;
+		    height: 30%;
+		    display: inline-block;
+		    position: absolute;
+		    top: 0;
+		    background-color: #2196F3;
+		    border-radius: 100%;
+		    -webkit-animation: sk-bounce 1.5s infinite ease-in-out;
+		    animation: sk-bounce 1.5s infinite ease-in-out;
+		}
+		.zoom2 {
+		    margin-left: 20px;
+		    bottom: 0;
+		    -webkit-animation-delay: 0.25s;
+		    animation-delay: 0.25s;
+		}
+		.zoom3 {
+		    margin-left: 40px;
+		    bottom: 0;
+		    -webkit-animation-delay: 0.5s;
+		    animation-delay: 0.5s;
+		}
+
+		@keyframes sk-bounce {
+			0%, 100% {
+			    transform: scale(0.4);
+			    -webkit-transform: scale(0.4);
+			}
+
+			50% {
+			    transform: scale(1);
+			    -webkit-transform: scale(1);
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wave"><div class="zoom1"></div><div class="zoom2"></div><div class="zoom3"></div></div>
+</body>
+</html>

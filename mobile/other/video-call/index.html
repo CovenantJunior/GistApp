@@ -1,0 +1,34 @@
+<html>
+    <head>
+    	<script src="jquery-1.11.3.min.js"></script>
+    	<script src="sinch.min.js"></script>
+        <script src="index.js"></script>
+    </head>
+
+    <body>
+        <!-- This form is the only thing that is displayed by default -->
+        <form id="authForm">
+            <input type="text" id="username" placeholder="username">
+            <input type="password" id="password" placeholder="password">
+            <input type="submit" value="Login" id="login">
+            <input type="submit" value="Sign Up" id="signup">
+        </form>
+
+        <!-- Hidden until the Sinch client is started successfully -->
+        <div id="sinch" style="display:none;">
+            <form id="callForm">
+                <input type="text" id="usernameToCall" placeholder="username to call">
+                <input type="submit" value="Call" id="call">
+                <input type="submit" value="Hangup" id="hangup">
+                <input type="submit" value="Answer" id="answer">
+            </form>
+
+            <!-- Will show updates on the current call -->
+            <div id="status"></div>
+
+            <!-- Will show video streams once call is connected -->
+            <video id="outgoing" autoplay></video>
+            <video id="incoming" autoplay></video>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+if(typeof(EventSource) !== "undefined") {
+ console.log('supported');
+  // Some code.....
+} else {
+  // Sorry! No server-sent events support..
+}

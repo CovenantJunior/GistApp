@@ -1,0 +1,2 @@
+<div data-widget data-app="uzyni9yzeti2e2a4edug"></div>
+<script src="//cdn.ringcaptcha.com/widget/v2/bundle.min.js"></script>

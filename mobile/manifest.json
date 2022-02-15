@@ -1,0 +1,28 @@
+{ 
+	"name": "GistApp", 
+	"short_name": "GistApp",
+	"description": "A Progressive Web App for GistApp",
+	"version": "3.2.0",
+	"author": {
+   		"name": "Covenant T. Elijah"
+	},
+	"theme_color": "#fff",
+	"background_color": "#fff",
+	"display": "standalone",	
+	"start_url": "./",
+	"lang": "en-US",
+	"gcm_sender_id": "1024646421316",
+	"gcm_user_visible_only": true,
+	"icons": [
+		{
+	    	"src": "favicon2.png",
+	    	"sizes": "512x512",
+	        "type": "image/png"
+  		},
+  		{
+	    	"src": "favicon1.png",
+	    	"sizes": "144x144",
+	        "type": "image/png"
+  		}
+  ]
+}
