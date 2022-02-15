@@ -1,9 +1,0 @@
-/*Copyright Payspieloo*/
-$(document).ready(function () {
-	document.onkeypress=function(e){
-		if (e.keyCode==32) {
-			e.preventDefault(); 
-		} 
-	} 
-	$('#login').on('click', function() {var uname = $('#name').val();var password = $('#pass').val();if ((uname!='')&&(password!='')) {$.ajax({url: 'reg', type: 'POST', data: {'log': true, 'uname': uname, 'password': password}, success: function(data) {if (data=='Granted') {swal("Login Successful !!","We are setting you up soon. Stay tuned !!","success"); setTimeout(function(){window.location='dashboard'},2000) } else {console.log(data); sweetAlert("Sorry...","We can't process your login right now !!\r\n"+data+"!","error"); } }, error: function(data) {console.log(data); sweetAlert("Sorry...","We can't process your login right now !!\r\nCheck your internet connection!","error"); } }) } else {sweetAlert("Oops...","Please fill all fields !!","error"); } });
-$('#unlock').on('click', function() {var uname = $('h4').html();var password = $('#pass').val();if ((uname!='')&&(password!='')) {$.ajax({url: '../reg', type: 'POST', data: {'log': true, 'uname': uname, 'password': password}, success: function(data) {if (data=='Granted') {swal("Login Successful !!","We are setting you up soon. Stay tuned !!","success"); setTimeout(function(){window.location='../dashboard'},2000) } else {console.log(data); sweetAlert("Sorry...","We can't process your login right now !!\r\n"+data+"!","error"); } }, error: function(data) {console.log(data); sweetAlert("Sorry...","We can't process your login right now !!\r\nCheck your internet connection!","error"); } }) } else {sweetAlert("Oops...","Please fill all fields !!","error"); } });});
