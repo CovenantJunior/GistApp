@@ -1,1 +1,0 @@
-document.querySelector(".sweet-wrong").onclick=function(){sweetAlert("Oops...","Something went wrong !!","error")},document.querySelector(".sweet-success").onclick=function(){swal("Hey, Good job !!","You clicked the button !!","success")}
